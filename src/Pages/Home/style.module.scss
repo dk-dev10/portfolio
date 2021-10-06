@@ -1,0 +1,103 @@
+.home {
+  width: 80vw;
+  height: 100vh;
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  .homeContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    img {
+      animation-name: img;
+      animation-duration: 0.8s;
+    }
+
+    h1 {
+      margin-top: -15px;
+      font-weight: 900;
+      font-size: 100px;
+      line-height: 93%;
+      text-transform: uppercase;
+      font-weight: 500;
+
+      animation-name: textTrns;
+      animation-duration: 0.8s;
+    }
+    p {
+      font-size: 22px;
+      color: #696969;
+
+      animation-name: textTrns;
+      animation-duration: 0.8s;
+
+      span {
+        color: #fff;
+        font-weight: 500;
+      }
+    }
+  }
+}
+
+.socials {
+  display: flex;
+}
+
+.social {
+  display: flex;
+  align-items: center;
+
+  margin-right: 20px;
+
+  span {
+    color: #696969;
+    margin-right: 6px;
+    visibility: hidden;
+    opacity: 0;
+    font-size: 0;
+    transition: 0.7s;
+  }
+
+  i {
+    font-size: 24px;
+  }
+
+  &:hover span {
+    animation-duration: 0.5s;
+    animation-name: socs;
+    visibility: visible;
+    transform: scaleY(1);
+    opacity: 1;
+    font-size: 16px;
+    color: #fff;
+  }
+}
+
+// Animations
+
+@keyframes img {
+  from {
+    opacity: 0;
+    transform: scale(.5);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes textTrns {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

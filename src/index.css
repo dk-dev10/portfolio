@@ -1,3 +1,4 @@
+@import url('./assets/fonts/fonts.css');
 /* body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -16,8 +17,64 @@ code {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+  cursor: none;
+  color: #fff;
 }
 
+::-webkit-scrollbar {
+  width: 0;
+}
+
+::selection {
+  background: rgb(255, 192, 76);
+}
+
+img::-moz-selection {
+  background-color: transparent;
+  color: #000;
+}
+
+img::selection {
+  background-color: transparent;
+  color: #000;
+}
 body {
   background-color: #000;
+}
+
+h1 {
+  font-size: 150px;
+  color: #fff;
+}
+
+a {
+  text-decoration: none;
+}
+
+button,
+input {
+  outline: none;
+  background: none;
+  border: none;
+}
+
+section {
+  padding: 100px 50px 50px;
+}
+
+.animateRight {
+  animation-duration: 1.3s;
+  animation-name: rightCont;
+}
+
+@keyframes rightCont {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
 }
