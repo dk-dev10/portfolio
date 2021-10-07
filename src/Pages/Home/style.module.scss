@@ -22,9 +22,10 @@
       margin-top: -15px;
       font-weight: 900;
       font-size: 100px;
-      line-height: 93%;
-      text-transform: uppercase;
+      line-height: 100%;
+      // text-transform: uppercase;
       font-weight: 500;
+      margin-bottom: 6px;
 
       animation-name: textTrns;
       animation-duration: 0.8s;
@@ -39,6 +40,27 @@
       span {
         color: #fff;
         font-weight: 500;
+      }
+    }
+  }
+
+  @media screen and (max-width: 800px) {
+    width: 100vw;
+    padding: 10vh;
+
+    align-items: center;
+    .homeContent {
+      h1 {
+        font-size: 70px;
+      }
+
+      p {
+        padding: 20px;
+      }
+
+      img {
+        max-width: 70vw;
+        height: auto;
       }
     }
   }
@@ -67,6 +89,15 @@
     font-size: 24px;
   }
 
+  @media screen and (max-width: 800px) {
+    span {
+      display: none;
+    }
+    i {
+      font-size: 30px;
+    }
+  }
+
   &:hover span {
     animation-duration: 0.5s;
     animation-name: socs;
@@ -83,7 +114,7 @@
 @keyframes img {
   from {
     opacity: 0;
-    transform: scale(.5);
+    transform: scale(0.5);
   }
   to {
     opacity: 1;

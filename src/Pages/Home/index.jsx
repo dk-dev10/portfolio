@@ -6,7 +6,7 @@ import style from './style.module.scss';
 
 const Home = () => {
   return (
-    <section className={style.home}>
+    <section className={style.home} id='#'>
       <div className={style.homeContent}>
         <img
           src={avatar}
@@ -16,10 +16,10 @@ const Home = () => {
           draggable='false'
         />
         <h1>
-          Hello, <br /> I`m Yusup
+          Привет, <br /> Я Юсуп
         </h1>
         <p>
-          and I`m a <span>front-end</span> developer
+          и я <span>front-end</span> разработчик
         </p>
       </div>
       <div className={style.socials}>
@@ -42,7 +42,7 @@ const Home = () => {
           <i className='ri-github-line'></i>
         </a>
         <a
-          href='https://github.com/dk-dev10'
+          href='https://t.me/dkuba99'
           target='_blank'
           rel='noopener noreferrer'
           className={style.social}

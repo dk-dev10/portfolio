@@ -63,10 +63,29 @@ section {
   padding: 100px 50px 50px;
 }
 
+.sectionTitle {
+  text-align: center;
+  font-size: 46px;
+  margin-bottom: 50px;
+}
+
 .animateRight {
   animation-duration: 1.3s;
   animation-name: rightCont;
 }
+
+/* Media */
+@media screen and (max-width: 800px) {
+  section {
+    padding: 30px 20px;
+  }
+
+  .sectionTitle {
+    font-size: 30px;
+  }
+}
+
+/* Ainmation */
 
 @keyframes rightCont {
   from {

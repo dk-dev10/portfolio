@@ -1,5 +1,30 @@
-.main {
+.skills {
+  margin-bottom: 20vh;
+}
+
+.column {
   display: flex;
-  justify-content: space-between;
-  margin: 0 10%;
+  justify-content: space-around;
+
+  @media screen and (max-width: 800px) {
+    flex-direction: column;
+
+    div {
+      margin-bottom: 40px;
+    }
+  }
+}
+
+.listTitle {
+  font-size: 28px;
+  margin-bottom: 15px;
+}
+
+.list {
+  padding-left: 20px;
+  font-size: 22px;
+
+  li {
+    margin: 8px 0;
+  }
 }

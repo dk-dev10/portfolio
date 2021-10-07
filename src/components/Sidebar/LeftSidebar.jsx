@@ -9,11 +9,11 @@ const cn = classNames.bind(style);
 const LeftSidebar = () => {
   return (
     <div className={cn(style.sidebar, style.sidebarLeft)}>
-      <a href='/' className={cn(style.logo, style.animate)}>
+      <a href='/portfolio/' className={cn(style.logo, style.animate)}>
         KuBa
       </a>
-      <h2 className={cn(style.pageName)}>Home</h2>
-      <p className={style.animate}>EN</p>
+      {/* <h2 className={cn(style.pageName)}>Home</h2> */}
+      <p className={style.animate}>RU</p>
     </div>
   );
 };

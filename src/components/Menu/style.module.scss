@@ -1,0 +1,217 @@
+.menu {
+  visibility: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #000;
+  width: 100vw;
+  height: 0vh;
+  z-index: 99;
+
+  transition: 0.8s ease-in-out;
+
+  &Content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 99;
+
+    opacity: 1;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &Active {
+      animation-name: links;
+      animation-duration: 1.6s;
+    }
+
+    &Dis {
+      animation-name: linksReverse;
+      animation-duration: 0.8s;
+    }
+
+    div {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      margin: 50px;
+      width: 25vw;
+      font-size: 46px;
+    }
+  }
+
+  &Active {
+    visibility: visible;
+    height: 100vh;
+  }
+
+  &Line {
+    position: absolute;
+    width: 2px;
+    height: 100%;
+    border: none;
+    margin-left: -3px;
+    background-color: #fff;
+
+    top: -50%;
+    left: 50%;
+    transform: rotate(180deg) translateY(-50%);
+
+    &Active {
+      animation-name: line;
+      animation-duration: 1.6s;
+    }
+
+    &Dis {
+      animation-name: lineReverse;
+      animation-duration: 0.8s;
+    }
+  }
+
+  @media screen and (max-width: 800px) {
+    &Content {
+      flex-direction: column;
+
+      div {
+        width: 100vw;
+      }
+    }
+
+    &Line {
+      display: none;
+    }
+  }
+}
+
+.menuClose {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 8vw;
+  height: 8vw;
+  background: none;
+  z-index: 100;
+
+  &:after,
+  &:before {
+    content: '';
+    display: block;
+    width: 8vw;
+    height: 4px;
+    background-color: #c30000;
+  }
+
+  &:after {
+    transform: rotate(45deg);
+  }
+
+  &:before {
+    transform: rotate(-45deg);
+  }
+
+  &Active {
+    animation-name: btn;
+    animation-duration: 1.6s;
+  }
+
+  &Dis {
+    animation-name: btnReverse;
+    animation-duration: 0.8s;
+  }
+
+  @media screen and (max-width: 800px) {
+    width: 20vw;
+
+    &:after,
+    &:before {
+      width: 120%;
+    }
+  }
+}
+
+.menuLink {
+  font-size: 70px;
+  margin: 20px;
+
+  @media screen and (max-width: 800px) {
+    font-size: 60px;
+  }
+}
+
+// Animation
+@keyframes line {
+  from {
+    height: 0;
+  }
+  50% {
+    height: 0;
+  }
+
+  to {
+    height: 100%;
+  }
+}
+@keyframes lineReverse {
+  from {
+    height: 100%;
+  }
+  50% {
+    height: 0;
+  }
+  to {
+    height: 0;
+  }
+}
+
+@keyframes btn {
+  from {
+    transform: translate(-50%, -500px);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+}
+@keyframes btnReverse {
+  from {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes links {
+  from {
+    transform: translateY(300px);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+@keyframes linksReverse {
+  from {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  to {
+    opacity: 0;
+  }
+}
