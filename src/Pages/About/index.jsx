@@ -17,7 +17,16 @@ const About = () => {
       </p>
       <p className={style.text}>
         Что бы улучшить свои навыки смотрю видео-уроки в ютубе, читаю статьи,
-        прохожу курсы и решаю задачи в codewars.com(ссылка на профиль).
+        прохожу курсы и решаю задачи в{' '}
+        <a
+          href='http://codewars.com'
+          target='_blank'
+          rel='noopener noreferrer'
+          className={style.sertificate}
+        >
+          codewars
+        </a>
+        .
         <br />
         <br />
         Блогеры который смотрю: Archakov Blog, Владилен Минин, Ulbi TV и т.п.
