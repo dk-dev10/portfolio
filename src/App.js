@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Cursor from './components/Cursor';
-import Main from './components/Main';
+import Main from './Pages/Main';
 import Menu from './components/Menu';
 
 export const Context = React.createContext();

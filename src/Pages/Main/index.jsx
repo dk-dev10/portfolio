@@ -1,12 +1,12 @@
 import React from 'react';
-import About from '../../Pages/About';
-import Home from '../../Pages/Home';
-import Projects from '../../Pages/Projects';
-import Skills from '../../Pages/Skills';
+import About from '../About';
+import Home from '../Home';
+import Projects from '../Projects';
+import Skills from '../Skills';
 
-import Container from '../Container/Container';
-import LeftSidebar from '../Sidebar/LeftSidebar';
-import RightSidebar from '../Sidebar/RightSidebar';
+import Container from '../../components/Container/Container';
+import LeftSidebar from '../../components/Sidebar/LeftSidebar';
+import RightSidebar from '../../components/Sidebar/RightSidebar';
 
 import style from './style.module.scss';
 
