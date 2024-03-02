@@ -1,6 +1,5 @@
-import { Link, NavLink } from 'react-router-dom';
-
-import ScrollToAnchor from '@/hook/ScrollToAnchor';
+import Scroll from 'react-scroll';
+const ScrollLink = Scroll.Link;
 
 import logo from '@/assets/logo.svg';
 import './header.css';
@@ -12,46 +11,53 @@ type TNav = {
 
 const nav: TNav[] = [
   {
-    to: '/#main',
+    to: 'main',
     title: 'Home',
   },
   {
-    to: '/#about',
+    to: 'about',
     title: 'About',
   },
   {
-    to: '/#skills',
+    to: 'skills',
     title: 'skills',
   },
-  {
-    to: '/#projects',
-    title: 'projects',
-  },
+  // {
+  //   to: 'projects',
+  //   title: 'projects',
+  // },
 ];
 
 const Header = () => {
-  const { location } = ScrollToAnchor();
-
   return (
     <header className='header'>
       <div className='container header__inner'>
-        <Link to='/#main' className='header__logo'>
+        <ScrollLink
+          spy={true}
+          hashSpy={false}
+          smooth={true}
+          duration={500}
+          to='main'
+          className='header__logo'
+        >
           <img src={logo} alt='logo' />
-        </Link>
+        </ScrollLink>
+
         <nav className='header__nav'>
           <ul className='header__nav--list'>
             {nav.map(({ to, title }) => (
               <li key={to + title}>
-                <NavLink
+                <ScrollLink
                   to={to}
-                  className={() => {
-                    return `text-border ${
-                      `/${location.hash}` === to ? 'active' : ''
-                    }`;
-                  }}
+                  spy={true}
+                  hashSpy={false}
+                  smooth={true}
+                  duration={500}
+                  activeClass='active'
+                  offset={0}
                 >
                   {title}
-                </NavLink>
+                </ScrollLink>
               </li>
             ))}
           </ul>

@@ -1,3 +1,4 @@
+import Ticker from '@/components/Ticker/Ticker';
 import './section.css';
 
 import avatar from '@/assets/avatar.jpg';
@@ -5,7 +6,7 @@ import avatar from '@/assets/avatar.jpg';
 const SectionMain = () => {
   return (
     <main id='main'>
-      <div className='container'>
+      <div>
         <div className='main__inner'>
           <div className='main__col'>
             <h1 className='main__title'>
@@ -22,6 +23,8 @@ const SectionMain = () => {
           </div>
         </div>
       </div>
+
+      <Ticker />
     </main>
   );
 };

@@ -1,3 +1,19 @@
+.section__title {
+  text-transform: uppercase;
+  font-size: clamp(1.5rem, 3vw + 1px, 2rem);
+  font-family: var(--ff-rubik);
+}
+
+.text-border {
+  text-shadow: -1px -1px 0 #000, 0 -1px 0 #000, 1px -1px 0 #000, 1px 0 0 #000,
+    1px 1px 0 #000, 0 1px 0 #000, -1px 1px 0 #000, -1px 0 0 #000;
+  color: #fff;
+}
+
+.tac {
+  text-align: center;
+}
+
 .container {
   width: 1120px;
   padding: 0 15px;
@@ -17,4 +33,10 @@
 
 .def__btn:hover {
   box-shadow: 0px 0px 0px -1px #fff, 0px 0px 0px 0px #000;
+}
+
+.text-border {
+  text-shadow: -1px -1px 0 #000, 0 -1px 0 #000, 1px -1px 0 #000, 1px 0 0 #000,
+    1px 1px 0 #000, 0 1px 0 #000, -1px 1px 0 #000, -1px 0 0 #000;
+  color: #fff;
 }
