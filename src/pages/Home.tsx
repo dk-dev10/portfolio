@@ -1,14 +1,14 @@
-import About from './Section/About';
+import About from './Section/About/About';
 import Main from './Section/Main';
-import Skills from './Section/Skills';
+import Skills from './Section/Skills/Skills';
 
 const Home = () => {
   return (
-    <main>
+    <>
       <Main />
       <About />
       <Skills />
-    </main>
+    </>
   );
 };
 
