@@ -6,10 +6,18 @@ import close from '@/assets/close.svg';
 import './about.css';
 
 const About = () => {
-  const onToogleClass = (e) => {
-    console.log(e);
-    e.target.classList.toggle('open');
-    e.target.parentNode.parentNode.parentNode.classList.toggle('open');
+  const onToogleClass = (e: React.MouseEvent<EventTarget>) => {
+    const target = e.target as HTMLElement;
+    target.classList.toggle('open');
+    if (
+      target.parentNode instanceof Node &&
+      target.parentNode.parentNode instanceof Node &&
+      target.parentNode.parentNode.parentNode instanceof HTMLElement
+    ) {
+      (target.parentNode.parentNode.parentNode as HTMLElement).classList.toggle(
+        'open'
+      );
+    }
   };
 
   return (
