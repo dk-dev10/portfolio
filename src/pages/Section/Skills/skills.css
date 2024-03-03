@@ -1,5 +1,5 @@
 .skills {
-  margin: 15vh auto;
+  padding-bottom: 15vh;
 }
 
 .skills__inner {
@@ -33,6 +33,11 @@
   font-weight: 500;
 
   position: relative;
+
+  font-size: 1.5rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  font-family: var(--ff-raleway);
 
   & span {
     text-transform: lowercase;

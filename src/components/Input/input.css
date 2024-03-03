@@ -1,0 +1,9 @@
+.input {
+  border: none;
+  outline: none;
+  backgroundf: #fff;
+  box-shadow: var(--border-transforms);
+
+  font-size: 1.4rem;
+  padding: 1em;
+}
