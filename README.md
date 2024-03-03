@@ -6,4 +6,4 @@
 - о моих навыках
 - и моих проектах (+ пет проекты)
 
-[dk-dev10.github.io/portfolio/](dk-dev10.github.io/portfolio)
+[dk-dev10.github.io/portfolio/](https://dk-dev10.github.io/portfolio)
