@@ -72,3 +72,19 @@
   text-shadow: none;
   color: #000;
 }
+
+@media (max-width: 1024px) {
+}
+
+@media (max-width: 768px) {
+  .header__nav {
+    /* display: none; */
+  }
+}
+
+@media (max-width: 480px) {
+  .header__nav--list {
+    gap: 1.4rem;
+    font-size: 0.8rem;
+  }
+}

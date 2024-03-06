@@ -40,6 +40,21 @@
   }
 }
 
+.certificate__title {
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+}
+.certificates {
+  list-style: none;
+}
+
+.certificates li {
+  margin-bottom: 0.7rem;
+  & a {
+    color: #000;
+  }
+}
+
 .work__experience {
   width: 100%;
   margin-top: 2rem;
@@ -72,8 +87,8 @@
 }
 
 .work__experience-num {
-  width: 3rem;
-  height: 3rem;
+  width: clamp(3rem, 4vw + 1px, 4rem);
+  height: clamp(3rem, 4vw + 1px, 4rem);
   border: 1px solid #000;
   border-radius: 50%;
   margin-right: 1rem;
@@ -84,7 +99,7 @@
 .work__experience-num:after {
   content: counter(item, decimal-leading-zero);
   counter-increment: item;
-  font-size: 2rem;
+  font-size: clamp(1.5rem, 4vw + 1px, 2rem);
   font-weight: 200;
   position: absolute;
   left: 50%;
@@ -93,14 +108,14 @@
 }
 
 .work__experience-title {
-  font-size: 1.5rem;
-  font-weight: 300;
+  font-size: clamp(1rem, 4vw + 1px, 1.6rem);
+  font-weight: 400;
   text-transform: uppercase;
   font-family: var(--ff-raleway);
 }
 
 .work__experience-description {
-  margin-left: 4rem;
+  margin-left: 1rem;
   max-height: 0;
   overflow: hidden;
 
@@ -108,7 +123,7 @@
 }
 
 .work__experience-item.open .work__experience-description {
-  max-height: 500px;
+  max-height: 800px;
   transition: max-height 0.5s ease-in;
 }
 
@@ -118,8 +133,17 @@
   margin-top: 0.5rem;
 }
 
-.work__experience-about {
-  padding-bottom: 3rem;
+.work__experience-description h4 {
+  margin-top: 2rem;
+}
+
+.techs {
+  margin-top: 0.5rem;
+  margin-bottom: 3rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
 .work_experience-drown {
@@ -147,6 +171,24 @@
     height: 100%;
   }
 }
-.work_experience-drown:hover {
-  background: rgba(161, 161, 161, 0.1);
+
+@media (max-width: 768px) {
+  .about__right-col {
+    display: none;
+  }
+}
+
+@media (max-width: 425px) {
+  .about__inner {
+    padding: 1.2rem;
+  }
+
+  .work__experience-header {
+    padding: 1rem 0.5rem;
+  }
+
+  .work_experience-drown {
+    width: 30px;
+    height: 30px;
+  }
 }

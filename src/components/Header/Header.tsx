@@ -22,10 +22,10 @@ const nav: TNav[] = [
     to: 'skills',
     title: 'skills',
   },
-  // {
-  //   to: 'projects',
-  //   title: 'projects',
-  // },
+  {
+    to: 'projects',
+    title: 'projects',
+  },
 ];
 
 const Header = () => {

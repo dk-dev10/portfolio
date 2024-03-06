@@ -2,6 +2,7 @@ import Ticker from '@/components/Ticker/Ticker';
 import './section.css';
 
 import avatar from '@/assets/avatar.jpg';
+import resume from '@/assets/resume/resume.pdf';
 
 const SectionMain = () => {
   return (
@@ -14,11 +15,13 @@ const SectionMain = () => {
               I`m <span className='text-border'>KuBa</span>.
             </h1>
             <p className='main__subtitle'>I`m front-end web developer</p>
-            <button className='def__btn main__btn'>Resume</button>
+            <a href={resume} target='_blank' className='def__btn main__btn'>
+              Resume
+            </a>
           </div>
           <div className='main__col'>
             <div className='main__avatar'>
-              <img src={avatar} alt='' />
+              <img src={avatar} alt='avatar' />
             </div>
           </div>
         </div>

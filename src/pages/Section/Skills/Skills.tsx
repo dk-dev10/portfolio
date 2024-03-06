@@ -7,6 +7,7 @@ import react from '@/assets/skills/react.png';
 import redux from '@/assets/skills/redux.png';
 import reactRouter from '@/assets/skills/reactRouter.png';
 import firebase from '@/assets/skills/firebase.png';
+import Ticker from '@/components/Ticker/Ticker';
 
 interface ISkill {
   title: string;
@@ -66,6 +67,8 @@ const Skills = () => {
           ))}
         </ul>
       </div>
+
+      <Ticker />
     </section>
   );
 };

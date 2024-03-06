@@ -12,4 +12,6 @@
   padding: 0;
   box-sizing: border-box;
   font-family: var(--ff-raleway);
+  line-height: 1.5rem;
+  letter-spacing: 0.04rem;
 }

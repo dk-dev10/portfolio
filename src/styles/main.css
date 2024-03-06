@@ -17,7 +17,7 @@
 .container {
   width: 1120px;
   padding: 0 15px;
-  max-width: 90%;
+  max-width: 100%;
   margin: 0 auto;
 }
 
@@ -39,4 +39,15 @@
   text-shadow: -1px -1px 0 #000, 0 -1px 0 #000, 1px -1px 0 #000, 1px 0 0 #000,
     1px 1px 0 #000, 0 1px 0 #000, -1px 1px 0 #000, -1px 0 0 #000;
   color: #fff;
+}
+
+@media (max-width: 768px) {
+  .main__inner {
+    flex-direction: column-reverse;
+    gap: 2rem;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
 }
