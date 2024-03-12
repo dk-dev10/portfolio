@@ -1,5 +1,4 @@
 import { projectData } from '@/data/projects';
-
 import linkIcon from '@/assets/link.svg';
 
 import './projects.css';
@@ -22,7 +21,7 @@ const Project = () => {
                 <h2 className='project__about-name'>{title}</h2>
 
                 {link && (
-                  <a href={link} target='_blank'>
+                  <a href={link} target='_blank' rel='noreferrer'>
                     <img src={linkIcon} alt='' />
                   </a>
                 )}

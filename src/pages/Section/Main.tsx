@@ -15,7 +15,12 @@ const SectionMain = () => {
               I`m <span className='text-border'>KuBa</span>.
             </h1>
             <p className='main__subtitle'>I`m front-end web developer</p>
-            <a href={resume} target='_blank' className='def__btn main__btn'>
+            <a
+              href={resume}
+              target='_blank'
+              className='def__btn main__btn'
+              rel='noreferrer'
+            >
               Resume
             </a>
           </div>

@@ -7,7 +7,7 @@ export const onToogleClass = (e: React.MouseEvent<EventTarget>) => {
     target.parentNode.parentNode.parentNode instanceof HTMLElement
   ) {
     (target.parentNode.parentNode.parentNode as HTMLElement).classList.toggle(
-      'open'
+      'open',
     );
   }
 };

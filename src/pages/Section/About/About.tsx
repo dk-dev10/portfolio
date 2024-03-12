@@ -1,6 +1,5 @@
 import Ticker from '@/components/Ticker/Ticker';
 import { onToogleClass } from '@/services/onToggleClass';
-
 import close from '@/assets/close.svg';
 import about from '@/assets/about.jpg';
 
@@ -28,7 +27,7 @@ const About = () => {
               <ul className='certificates'>
                 {aboutData.certificate.map((cert) => (
                   <li key={cert.title}>
-                    <a target='_blank' href={cert.link}>
+                    <a target='_blank' href={cert.link} rel='noreferrer'>
                       {cert.title}
                     </a>
                   </li>
@@ -65,7 +64,7 @@ const About = () => {
                       </ul>
                     </div>
                   </li>
-                )
+                ),
               )}
             </ol>
           </div>
