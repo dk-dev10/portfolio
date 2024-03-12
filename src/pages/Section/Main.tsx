@@ -1,8 +1,8 @@
 import Ticker from '@/components/Ticker/Ticker';
-import './section.css';
-
 import avatar from '@/assets/avatar.jpg';
 import resume from '@/assets/resume/resume.pdf';
+
+import './section.css';
 
 const SectionMain = () => {
   return (

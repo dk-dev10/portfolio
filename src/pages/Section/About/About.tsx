@@ -1,27 +1,36 @@
 import Ticker from '@/components/Ticker/Ticker';
 import { onToogleClass } from '@/services/onToggleClass';
 import close from '@/assets/close.svg';
-import about from '@/assets/about.jpg';
 
 import './about.css';
 import { aboutData, experienceData } from '@/data/about';
+import { Show } from '@/components/Show/Show';
 
 const About = () => {
   return (
     <section id='about' className='about'>
       <div className='about__inner'>
         <div className='about__top'>
-          <div className='about__right-col'>
-            <div className='about__avatar'>
-              <img src={about} alt='avatar' />
-            </div>
-          </div>
           <div className='about__left-col'>
             <h2 className='section__title text-border'>about me</h2>
             <div className='about__description'>
               {aboutData.text.map((text, i) => (
                 <p key={i + 1 ** i}>{text}</p>
               ))}
+
+              <Show>
+                <Show.When isTrue={!!aboutData.list}>
+                  <h3 className='certificate__title'>{aboutData.list.title}</h3>
+                  <ul className='about__skills'>
+                    {aboutData.list.items.map((item, ind) => (
+                      <li
+                        dangerouslySetInnerHTML={{ __html: item }}
+                        key={`${aboutData.list}` + ind}
+                      />
+                    ))}
+                  </ul>
+                </Show.When>
+              </Show>
 
               <h3 className='certificate__title'>Сертификаты:</h3>
               <ul className='certificates'>

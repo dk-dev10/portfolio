@@ -19,7 +19,7 @@ const Footer = () => {
             <img src={tg} alt='' />
           </div>
         </address> */}
-        <small>&copy; Copyright 2024, KuBa</small>
+        <small>&copy; All rights reserved - Designed by KuBa</small>
       </div>
     </footer>
   );

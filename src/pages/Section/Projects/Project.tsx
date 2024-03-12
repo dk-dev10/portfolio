@@ -26,7 +26,9 @@ const Project = () => {
                   </a>
                 )}
               </div>
-              {stack.length > 1 && <p>Technologies</p>}
+              {stack.length > 1 && (
+                <h3 className='list__title'>Technologies</h3>
+              )}
               <ul className='project__techs'>
                 {stack.length > 1 &&
                   stack.map((st, i) => <li key={st + i ** i}>{st} / </li>)}

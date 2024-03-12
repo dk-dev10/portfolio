@@ -1,15 +1,21 @@
 import js from '@/assets/certificate/js.pdf';
 import jsreact from '@/assets/certificate/react_js.pdf';
 
+interface IAboutData {
+  text: string[];
+  list: TList;
+  certificate: TCertfifcate[];
+}
+
+type TList = {
+  title: string;
+  items: string[];
+};
+
 type TCertfifcate = {
   title: string;
   link: string;
 };
-
-interface IAboutData {
-  text: string[];
-  certificate: TCertfifcate[];
-}
 
 type TExperience = {
   where: string;
@@ -21,10 +27,33 @@ type TExperience = {
 export const aboutData: IAboutData = {
   text: [
     'Привет ), рад видет в моем портфолио!',
-    `Увлеченный разработчик с опытом создания SPA с использованием в основном React, Redux, Typescript. 
-    Я совершенствую свои навыки в этом направлении и планирую расширить их за счет новых технологий.`,
-    'Открыт для ваших предложений.',
+    `Я в IT более 2 лет, более 1.5 лет занимаюсь frontend-разработкой коммерческих проектов. 
+    Последний год я активно разрабатываю веб приложения (React).`,
+    `За все это время я успел поработать самостоятельно в качестве фрилансера и 
+    поработал в небольшой компании.`,
+    `
+    Получил опыт во фрилансе и поработав в небольшой компании, 
+    я обладаю большим опытом работы с клиентами и дизайнерами, 
+    внедрения проектов от начала до конца.
+  `,
+    `
+    В 2022 году я окончила университет по специальности "Информационные системы и технологии". 
+    Также прошла дополнительные курсы по разработке верстки и SPA.`,
   ],
+  list: {
+    title: 'Мои навыки:',
+    items: [
+      `Большой опыт работы с системой BEM в стиле написани camelCase, 
+      это мне помогает с именованием классов, компонентов, методов и переменных`,
+      `Хорший опыт разработки сложных и адаптивных веб-сайтов/веб-приложений. 
+      Разработка веб-приложений на <b> React.js (+ Typescript, Hooks, Axios, Redux(RTK Query)) </b>`,
+      `Продвинутый <b>HTML</b> (HTML5 API, хорошее понимание семантических тегов), 
+      <b>CSS</b> (flexbox, grid, анимация css), <b>JavaScript</b> (ES6+);
+      `,
+      'Опыт работы с менеджерами задач: <b>YouTrack и Trello</b>',
+      'Опыт использование графических редакторов: <b>Figma</b> (Adobe Photoshop, Adobe XD)',
+    ],
+  },
   certificate: [
     {
       title: 'Практический Javascript',

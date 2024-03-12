@@ -1,98 +1,59 @@
 .skills__inner {
   width: 100%;
-  border: 2px solid #000;
-  padding: 3rem;
-  box-shadow: var(--border-transforms);
 
   & .section__title {
     margin-bottom: 3rem;
   }
 }
 
+.skill__border {
+}
+
 .skills__list {
-  columns: 2;
-  -webkit-columns: 2;
-  -moz-columns: 2;
-  list-style: none;
-  font-size: clamp(1rem, 1vw + 1rem, 1.5rem);
-  text-transform: uppercase;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
   width: 100%;
 }
 
-.skills__item {
-  border-bottom: 1px solid #000;
+.skill__item {
+  border: 2px solid #000;
+  box-shadow: var(--border-transforms);
+
   display: flex;
-  justify-content: space-between;
-  align-items: end;
-  margin-bottom: 1.5rem;
-  padding: 0 1rem;
-  font-weight: 500;
+  align-items: center;
+  flex: 1;
+  min-width: max-content;
+  gap: 1rem;
+  padding: 0.5rem;
+  padding-right: 1rem;
 
-  position: relative;
+  .skill__img {
+    aspect-ratio: 1/1;
+    width: clamp(1.5rem, 4vw + 1px, 3rem);
+    max-width: 5rem;
+    max-height: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
-  font-size: clamp(1.3rem, 4vw + 1px, 1.6rem);
-  font-weight: 300;
-  text-transform: uppercase;
-  font-family: var(--ff-raleway);
+  & img {
+    object-fit: cover;
+    max-width: 100%;
+    max-height: 100%;
+  }
 
-  & span {
-    text-transform: lowercase;
-    color: #626262;
-    font-size: 1.2rem;
-    font-size: clamp(0.8rem, 3vw + 1px, 1.2rem);
+  span {
+    font-size: clamp(1.3rem, 4vw + 1px, 1.6rem);
+    font-weight: 300;
+    text-transform: uppercase;
+    font-family: var(--ff-raleway);
   }
 }
 
-.skills__item img {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  width: 50px;
-  height: auto;
-  transform: translate(-50%, -50%) rotate(5deg) scale(0);
-  transition: all 0.4s ease;
-}
-
-.skills__item:hover img {
-  display: block;
-  transform: translate(-50%, -50%) rotate(-2deg) scale(1.2);
-}
-
-@media (max-width: 768px) {
+@media (max-width: 420px) {
   .skills__list {
-    columns: 1;
-    -webkit-columns: 1;
-  }
-
-  .skills__item {
     gap: 1rem;
-
-    & span {
-      margin-left: auto;
-    }
-
-    & img {
-      order: -1;
-    }
-  }
-
-  .skills__item img {
-    transform: scale(0.8);
-    position: relative;
-    left: auto;
-  }
-}
-@media (max-width: 425px) {
-  .skills__inner {
-    padding: 1.2rem;
-  }
-
-  .skills__item {
-    font-size: 1.2rem;
-    padding: 0 0.5rem;
-  }
-
-  .skills__item img {
-    width: 30px;
   }
 }

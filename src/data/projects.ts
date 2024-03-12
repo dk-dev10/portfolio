@@ -16,13 +16,13 @@ export const projectData: TProject[] = [
     img: artlife,
     title: 'Art & Life',
     stack: ['React', 'Rtk Query', 'React-router-dom', 'Firebase'],
-    link: 'https://dk-dev10.github.io/rtkquery_firebase',
+    link: 'https://map-blog.vercel.app',
   },
   {
     img: forstudio,
     title: 'For studio',
     stack: ['HTML', 'CSS', 'Javascript'],
-    link: 'https://dk-dev10.github.io/for_studio',
+    link: 'https://for-studio.vercel.app',
   },
   {
     img: loading,
