@@ -27,12 +27,15 @@
 
   .skill__img {
     aspect-ratio: 1/1;
-    width: clamp(1.5rem, 4vw + 1px, 3rem);
-    max-width: 5rem;
-    max-height: 5rem;
+    width: clamp(2.5rem, 6vw + 1px, 3.5rem);
+    max-width: 4rem;
+    max-height: 4rem;
     display: flex;
     justify-content: center;
     align-items: center;
+
+    padding-right: 0.5rem;
+    border-right: 1px solid gray;
   }
 
   & img {

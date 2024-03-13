@@ -1,6 +1,6 @@
 import Ticker from '@/components/Ticker/Ticker';
 import avatar from '@/assets/avatar.jpg';
-import resume from '@/assets/resume/resume.pdf';
+import resume from '@/assets/resume/resume_not.pdf';
 
 import './section.css';
 
