@@ -15,7 +15,10 @@ const About = () => {
             <h2 className='section__title text-border'>about me</h2>
             <div className='about__description'>
               {aboutData.text.map((text, i) => (
-                <p key={i + 1 ** i}>{text}</p>
+                <p
+                  dangerouslySetInnerHTML={{ __html: text }}
+                  key={i + 1 ** i}
+                />
               ))}
 
               <Show>
