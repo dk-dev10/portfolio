@@ -6,4 +6,4 @@
 - о моих навыках
 - и моих проектах (+ пет проекты)
 
-[dkuba.vercel.app](https://dkuba.vercel.app)
+[d-kuba.vercel.app](https://d-kuba.vercel.app)
