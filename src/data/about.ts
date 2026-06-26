@@ -4,7 +4,7 @@ import jsreact from '@/assets/certificate/react_js.pdf';
 interface IAboutData {
   text: string[];
   list: TList;
-  certificate: TCertfifcate[];
+  certificate: TCertificate[];
 }
 
 type TList = {
@@ -12,7 +12,7 @@ type TList = {
   items: string[];
 };
 
-type TCertfifcate = {
+type TCertificate = {
   title: string;
   link: string;
 };
@@ -21,7 +21,7 @@ type TExperience = {
   where: string;
   date: string;
   description: string;
-  techlogies: string[];
+  technologies: string[];
 };
 
 export const aboutData: IAboutData = {
@@ -68,11 +68,18 @@ export const aboutData: IAboutData = {
 
 export const experienceData: TExperience[] = [
   {
+    where: 'Gexarus',
+    date: '03.2023 - 03.2026',
+    description:
+      'В мои обязанности входило участвовать в разработке и поддержке собственной CMS системы и создание и настройку функциональности, а также участие в разработке веб-приложений для клиентов на базе этой системы.',
+    technologies: ['React', 'Redux', 'React-router', 'Tailwind', 'Github'],
+  },
+  {
     where: 'Black-Perimeter',
     date: '10.2021 - 02.2023',
     description:
       'В мои обязанности входило участвовать в разработке и поддержке собственной CMS системы и создание и настройку функциональности, а также участие в разработке веб-приложений для клиентов на базе этой системы.',
-    techlogies: ['React', 'Redux', 'React-router', 'Scss', 'Github'],
+    technologies: ['React', 'Redux', 'React-router', 'Scss', 'Github'],
   },
   {
     where: 'Freelance',
@@ -80,6 +87,6 @@ export const experienceData: TExperience[] = [
     description: `Работал как фрилансер, сотрудничая с несколькими
     дизайнерами для создания веб-сайтов. Основные обязанности включали разработку и внедрение веб-сайтов с использованием HTML, CSS и JavaScript, а также доработку и поддержку сайтов на платформе WordPress. 
     В процессе работы обеспечивал эффективное взаимодействие с дизайнерами и заказчиками, чтобы достичь требуемых результатов в срок и согласно спецификациям проекта.`,
-    techlogies: ['HTML', 'CSS', 'JavaScript', 'WordPress'],
+    technologies: ['HTML', 'CSS', 'JavaScript', 'WordPress'],
   },
 ];

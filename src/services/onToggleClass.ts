@@ -1,4 +1,4 @@
-export const onToogleClass = (e: React.MouseEvent<EventTarget>) => {
+export const onToggleClass = (e: React.MouseEvent<EventTarget>) => {
   const target = e.target as HTMLElement;
   target.classList.toggle('open');
   if (

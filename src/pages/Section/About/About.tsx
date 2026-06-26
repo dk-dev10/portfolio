@@ -1,5 +1,5 @@
 import Ticker from '@/components/Ticker/Ticker';
-import { onToogleClass } from '@/services/onToggleClass';
+import { onToggleClass } from '@/services/onToggleClass';
 import close from '@/assets/close.svg';
 
 import './about.css';
@@ -53,14 +53,14 @@ const About = () => {
           <div className='work__experience'>
             <ol className='work__experience-list'>
               {experienceData.map(
-                ({ where, date, description, techlogies }) => (
+                ({ where, date, description, technologies }) => (
                   <li key={where + date} className='work__experience-item'>
                     <div className='work__experience-header'>
                       <p className='work__experience-num'></p>
                       <p className='work__experience-title'>{where}</p>
                       <button
                         className='work_experience-drown'
-                        onClick={onToogleClass}
+                        onClick={onToggleClass}
                       >
                         <img src={close} alt='close' />
                       </button>
@@ -70,7 +70,7 @@ const About = () => {
                       <p className='work__experience-about'>{description}</p>
                       <h4>Технологии которые я использовал:</h4>
                       <ul className='techs'>
-                        {techlogies.map((tech) => (
+                        {technologies.map((tech) => (
                           <li key={tech}>{tech}</li>
                         ))}
                       </ul>
